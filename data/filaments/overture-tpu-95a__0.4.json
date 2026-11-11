@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "overture-tpu-95a__0.4",
+  "protocol_version": "1.0",
+  "status": "untested",
+  "filament": {
+    "brand": "Overture",
+    "name": "TPU 95A",
+    "material": "TPU",
+    "flexible": true,
+    "drying": "70 C, 7 h"
+  },
+  "printer": {
+    "model": "Bambu Lab H3C",
+    "nozzle_diameter": 0.4,
+    "nozzle_type": "",
+    "build_plate": "",
+    "enclosure": "",
+    "room_temp_c": null
+  },
+  "bambu": {
+    "inherits": "Generic TPU @BBL H3C"
+  },
+  "settings": {
+    "nozzle_temp": 225,
+    "nozzle_temp_initial_layer": 225,
+    "bed_temp": 40,
+    "flow_ratio": 1.0,
+    "max_volumetric_speed": 3.2,
+    "pressure_advance": null,
+    "fan_min_speed": 50,
+    "fan_max_speed": 70,
+    "layer_height": 0.16
+  },
+  "tests": {
+    "adhesion": [],
+    "dimension": {},
+    "fit": {}
+  },
+  "notes": "Research-based max-strength starting point, not yet measured. Presets: presets/bambu/. Sources: research/strength-tpu-95a.md.",
+  "tested_by": "",
+  "tested_on": ""
+}
