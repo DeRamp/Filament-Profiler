@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "overture-super-pla-plus__0.4",
+  "protocol_version": "1.0",
+  "status": "untested",
+  "filament": {
+    "brand": "Overture",
+    "name": "Super PLA+",
+    "material": "PLA",
+    "flexible": false,
+    "drying": ""
+  },
+  "printer": {
+    "model": "Bambu Lab H3C",
+    "nozzle_diameter": 0.4,
+    "nozzle_type": "",
+    "build_plate": "",
+    "enclosure": "",
+    "room_temp_c": null
+  },
+  "bambu": {
+    "inherits": ""
+  },
+  "settings": {
+    "nozzle_temp": 210,
+    "nozzle_temp_initial_layer": 210,
+    "bed_temp": 55,
+    "flow_ratio": null,
+    "max_volumetric_speed": 12.0,
+    "pressure_advance": null,
+    "fan_min_speed": null,
+    "fan_max_speed": null,
+    "layer_height": 0.2
+  },
+  "tests": {
+    "adhesion": [],
+    "dimension": {},
+    "fit": {}
+  },
+  "notes": "Baseline from the Overture TDS range (190-220 C nozzle, 40-60 C bed). Test plan: test-plans/overture-super-pla-plus__0.4.json",
+  "tested_by": "",
+  "tested_on": ""
+}

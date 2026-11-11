@@ -1,0 +1,76 @@
+{
+  "id": "overture-super-pla-plus__0.4",
+  "filament": "Overture Super PLA+",
+  "short": "PLA+",
+  "nozzle": 0.4,
+  "specimen": "FP-A",
+  "maker_range": {
+    "nozzle_temp": [190, 220],
+    "bed_temp": [40, 60],
+    "source": "Overture Super PLA+ TDS v1.1 (Jan 2024)"
+  },
+  "baseline": {
+    "nozzle_temp": 210,
+    "bed_temp": 55,
+    "layer_height": 0.2,
+    "line_width": 0.42
+  },
+  "notes": "First strength round, based on CNC Kitchen's published results (wider lines, layer height <= half the nozzle, hotter within limits). Flow ratio and speed are filament settings that cannot be changed per part, so they are left for the next round.",
+  "plates": [
+    {
+      "name": "1 Line width",
+      "test": "adhesion",
+      "nozzle_temp": 210,
+      "why": "CNC Kitchen: layer adhesion peaked near 150% line width (PLA).",
+      "variants": [
+        {"code": "W100", "desc": "line width 0.42 mm (105%, slicer default)", "settings": {"line_width": 0.42}},
+        {"code": "W125", "desc": "line width 0.50 mm (125%)", "settings": {"line_width": 0.50}},
+        {"code": "W150", "desc": "line width 0.60 mm (150%)", "settings": {"line_width": 0.60}},
+        {"code": "W175", "desc": "line width 0.70 mm (175%)", "settings": {"line_width": 0.70}}
+      ]
+    },
+    {
+      "name": "2 Layer height",
+      "test": "adhesion",
+      "nozzle_temp": 210,
+      "why": "CNC Kitchen: strength drops when layers are thicker than half the nozzle; 0.15 mm was best on 0.4.",
+      "variants": [
+        {"code": "L12", "desc": "layer height 0.12 mm", "settings": {"layer_height": 0.12}},
+        {"code": "L16", "desc": "layer height 0.16 mm", "settings": {"layer_height": 0.16}},
+        {"code": "L20", "desc": "layer height 0.20 mm (baseline)", "settings": {"layer_height": 0.20}},
+        {"code": "L24", "desc": "layer height 0.24 mm", "settings": {"layer_height": 0.24}}
+      ]
+    },
+    {
+      "name": "3 Temp 200C - set nozzle to 200",
+      "test": "adhesion",
+      "nozzle_temp": 200,
+      "variants": [{"code": "T200", "desc": "nozzle 200 C", "settings": {}}]
+    },
+    {
+      "name": "4 Temp 210C - set nozzle to 210",
+      "test": "adhesion",
+      "nozzle_temp": 210,
+      "variants": [{"code": "T210", "desc": "nozzle 210 C (baseline)", "settings": {}}]
+    },
+    {
+      "name": "5 Temp 220C - set nozzle to 220",
+      "test": "adhesion",
+      "nozzle_temp": 220,
+      "variants": [{"code": "T220", "desc": "nozzle 220 C (maker max)", "settings": {}}]
+    },
+    {
+      "name": "6 Temp 230C - set nozzle to 230 (optional)",
+      "test": "adhesion",
+      "nozzle_temp": 230,
+      "why": "Above Overture's stated max. CNC Kitchen's PLA peaked at 230 C, so this is an optional check.",
+      "variants": [{"code": "T230", "desc": "nozzle 230 C (above maker range, optional)", "settings": {}}]
+    },
+    {
+      "name": "7 Accuracy - baseline",
+      "test": "accuracy",
+      "nozzle_temp": 210,
+      "variants": [{"code": "BASE", "desc": "baseline settings", "settings": {}}]
+    }
+  ]
+}

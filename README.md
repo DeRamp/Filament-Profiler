@@ -25,7 +25,14 @@ The website (GitHub Pages, served from `docs/`) has the full test protocols, the
 | `tools/generate_models.py` | Parametric source for the test models |
 | `tools/new_filament.py` | Creates blank records for a new filament |
 | `tools/build.py` | Validates, computes, exports, and builds the site |
+| `test-plans/` | Which settings to test for a filament, plate by plate |
+| `tools/build_test_plates.py` | Turns a test plan into a labeled Bambu Studio project (`.3mf`) |
+| `test-plates/` | Generated, ready-to-print test plates. Do not edit by hand |
 | `exports/`, `docs/` | Generated. Do not edit by hand |
+
+## Test plates
+
+`python tools/build_test_plates.py --all` builds a Bambu Studio project for every plan in `test-plans/`. Every part has its test code engraved on it (for example `W150` on the front and `PLA+ 3` on the back of a layer adhesion specimen), and the per-part settings are stored in the project. See the README inside each `test-plates/<plan>/` folder for what is on each plate.
 
 ## Setup
 
