@@ -1,4 +1,4 @@
-# Max-strength settings: Overture Super PLA+ on a Bambu Lab H3C (0.4 and 0.6 mm nozzles)
+# Max-strength settings: Overture Super PLA+ on a Bambu Lab H3C (0.4, 0.6 and 0.8 mm nozzles)
 
 The presets are in `presets/bambu/`:
 
@@ -67,6 +67,24 @@ The same rules, scaled to the bigger nozzle:
 Notes for the 0.6 nozzle:
 - Max volumetric speed stays at **10 mm³/s**. The melt rate depends on the hotend, not the nozzle size, and strength dropped above about 12 mm³/s (4). A 0.6 nozzle isn't stronger per gram, but it puts down a thick wall in less time (12). Because of the cap, this preset will not be faster than the 0.4 one. Raise the cap to 12 to 14 mm³/s if print time matters more than the last few percent of strength.
 - Fine details and small text will be coarser than with the 0.4 nozzle.
+
+## 0.8 mm nozzle version
+
+The 0.8 mm version has two files:
+- `Overture_Super_PLA-plus_Max_Strength_0.8_nozzle.json`: the filament preset. It uses the same values as the 0.4 version, limited to the H3C 0.8 nozzle.
+- `0.32mm_Max_Strength_Super_PLA-plus_0.8_nozzle.json`: the process preset. It inherits `0.32mm Balanced Quality @BBL H3C 0.8 nozzle`, which Bambu describes as its strength profile for the 0.8 nozzle.
+
+| Setting | Bambu default (0.32 BQ 0.8) | Max strength | Why |
+|---|---|---|---|
+| Layer height | 0.32 mm | **0.32 mm** | 40% of the nozzle diameter, the same ratio as the other presets, and under the half-nozzle limit of 0.40 mm (2). |
+| Wall loops | 2 | **3** | 0.82 + 2 × 1.2 ≈ 3.2 mm of wall, close to the other presets (12). |
+| Inner wall, infill and solid infill line width | 0.82 mm | **1.20 mm** (150%) | Same 150% rule (13). |
+| Outer wall and top surface line width | 0.82 mm | 0.82 mm | Unchanged. |
+| Top / bottom shells | 3 / 3 layers | **4 layers (1.28 mm) / 3 layers (0.96 mm)** | Gives about the same shell thickness as the other presets. |
+| Sparse infill | 15% grid | **40% gyroid** | Same as the other presets. |
+| Speeds | 200 to 350 mm/s | **60 mm/s** | The 10 mm³/s cap allows only about 26 mm/s with 1.2 × 0.32 mm lines, so the flow cap sets the speed. |
+
+**About print time:** with the 10 mm³/s cap, the 0.8 preset is the slowest of the three. Each line carries much more plastic, so it moves very slowly. The cap is kept because it is the best-supported value for strength (4). The point of a 0.8 nozzle is speed (12), so if you use this preset for big parts, raising the cap to 14 to 16 mm³/s is a reasonable trade.
 
 ## What these presets don't change, and why
 
