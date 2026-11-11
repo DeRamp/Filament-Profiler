@@ -1,0 +1,31 @@
+{
+    "type": "filament",
+    "name": "FP Generic TPU 95A 0.4 mm",
+    "from": "User",
+    "inherits": "",
+    "filament_settings_id": [
+        "FP Generic TPU 95A 0.4 mm"
+    ],
+    "filament_notes": "Filament Profiler record generic-tpu-95a__0.4, protocol v1.0",
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "hot_plate_temp": [
+        "35"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "35"
+    ],
+    "textured_plate_temp": [
+        "35"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "35"
+    ],
+    "filament_max_volumetric_speed": [
+        "3.2"
+    ]
+}

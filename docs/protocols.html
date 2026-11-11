@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test protocols · Filament Profiler</title>
+<link rel="stylesheet" href="style.css"></head>
+<body><header><div class="wrap"><a class="brand" href="index.html">Filament Profiler</a><nav><a href="index.html">Filaments</a><a href="protocols.html" class=on>Test protocols</a><a href="downloads.html">Downloads</a><a href="add.html">Add a filament</a></nav></div></header>
+<main><div class="wrap"><h1>Test protocols</h1><p class="lead">These are the standard test methods. Follow them exactly so your results can be compared with everyone else's. <a href="downloads.html">Get the test models here.</a></p><ul><li><a href="#00-overview">Overview and ground rules</a></li><li><a href="#01-layer-adhesion">FP-A: Layer adhesion</a></li><li><a href="#02-dimension">FP-D: Dimensional accuracy</a></li><li><a href="#03-fit">FP-F: Fit</a></li></ul><section><h2 id="00-overview" style="font-size:1.5rem">Overview and ground rules</h2>
+<p>Filament Profiler is a shared, repeatable way to find the strongest and most accurate settings for a filament, and to publish what you found so other people can import it. Results are only comparable if everyone tests the same way, so please follow these protocols exactly and write down anything you did differently.</p>
+<p><strong>Protocol version: 1.0.</strong> Record this version with every result. The test models carry the same version number in their file names.</p>
+<h2>What gets tested</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Test</th>
+<th>What it tells you</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FP-A</td>
+<td>Layer adhesion (Z tensile)</td>
+<td>How strongly layers bond, in MPa</td>
+<td><code>FP-A_layer-adhesion</code></td>
+</tr>
+<tr>
+<td>FP-A-T</td>
+<td>Layer adhesion for flexibles</td>
+<td>Same, for TPU and other flexibles</td>
+<td><code>FP-A-T_layer-adhesion-tpu</code></td>
+</tr>
+<tr>
+<td>FP-D</td>
+<td>Dimensional accuracy</td>
+<td>How far holes and pegs are off nominal</td>
+<td><code>FP-D_dimension-gauge</code></td>
+</tr>
+<tr>
+<td>FP-F</td>
+<td>Fit</td>
+<td>Which clearance gives a loose, slip, snug or press fit</td>
+<td><code>FP-F_fit-plate</code> + <code>FP-F_fit-peg</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>One <strong>record</strong> is one filament on one nozzle diameter. A filament tested on 0.4 mm and 0.6 mm is two records.</p>
+<h2>Equipment</h2>
+<ul>
+<li>Digital calipers, 0.01 mm resolution. Zero them before every session.</li>
+<li>A bench vise.</li>
+<li>A digital hanging scale (luggage scale) with <strong>peak hold</strong>, 50 kg range, 10 g or 20 g resolution. Check it once against a known weight, such as 5 L of water in a bucket (5 kg plus the bucket).</li>
+<li>Safety glasses. Specimens snap suddenly.</li>
+</ul>
+<h2>Before any test print</h2>
+<ol>
+<li><strong>Dry the filament</strong> to the maker's recommendation and print from a dry box. Record how it was dried. This matters most for nylon and TPU.</li>
+<li><strong>Calibrate the basics</strong> in the slicer for this filament and nozzle: flow dynamics (pressure advance) and flow rate. Record the calibrated flow ratio. That value is your "0%" for the flow sweep.</li>
+<li><strong>Use a clean, known build plate</strong> and record which plate it is.</li>
+<li><strong>Record room temperature</strong> and whether the printer was enclosed or the door was open.</li>
+</ol>
+<h2>Fixed print settings for all tests</h2>
+<p>These stay the same for every test print so that only the variable under test changes.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer height</td>
+<td>50% of nozzle diameter (0.10 / 0.20 / 0.30 / 0.40 mm for 0.2 / 0.4 / 0.6 / 0.8 nozzles)</td>
+</tr>
+<tr>
+<td>Line width</td>
+<td>Slicer default for the nozzle</td>
+</tr>
+<tr>
+<td>Wall loops</td>
+<td>Enough that FP-A is solid walls (set 99)</td>
+</tr>
+<tr>
+<td>Infill for FP-D and FP-F</td>
+<td>15% grid or gyroid, 3 walls for 0.2 and 0.4 nozzles, 2 walls for 0.6 and 0.8</td>
+</tr>
+<tr>
+<td>Top and bottom layers</td>
+<td>Slicer default</td>
+</tr>
+<tr>
+<td>Seam</td>
+<td>Aligned, and for FP-A placed on a narrow face</td>
+</tr>
+<tr>
+<td>Supports</td>
+<td>None. All models print without supports</td>
+</tr>
+<tr>
+<td>Brim</td>
+<td>5 mm outer brim on FP-A only</td>
+</tr>
+<tr>
+<td>Scaling, shrinkage compensation, X-Y hole or contour compensation</td>
+<td>Off (100%, 0 mm). We are measuring the raw error</td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>As exported. Do not rotate the models</td>
+</tr>
+</tbody>
+</table></div>
+<h2>The sweep: one variable at a time</h2>
+<p>Testing every combination would take hundreds of prints. Instead, change one variable per stage and carry the winner forward.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Variable</th>
+<th>Levels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Baseline</td>
+<td>The maker's or slicer's default profile, with your calibrated flow ratio</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Nozzle temperature</td>
+<td>default −10, default, default +10, default +20 °C. Stay inside the maker's stated range</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Speed</td>
+<td>Max volumetric speed at 100%, 50% and 25% of the default</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Flow ratio</td>
+<td>calibrated, +3%, +6%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Part cooling (optional)</td>
+<td>default, half, off. Skip for materials that need full cooling to hold shape</td>
+</tr>
+</tbody>
+</table></div>
+<p>The winner of each stage is the level with the highest mean FP-A strength. If two levels are within one standard deviation of each other, pick the one closer to the default, because it will print cleaner.</p>
+<p>After stage 3 you have your <strong>strength profile</strong>. Print FP-D and FP-F once with the baseline profile and once with the strength profile, because overextrusion and heat usually cost accuracy and you want to know how much.</p>
+<h2>Nozzle and material limits</h2>
+<ul>
+<li>Do not run glass or carbon filled filaments on a 0.2 mm nozzle. Use a hardened nozzle of 0.4 mm at minimum, 0.6 mm preferred.</li>
+<li>TPU on a 0.2 mm nozzle is usually not practical. Skip it unless the maker says otherwise.</li>
+<li>Skipped combinations are simply not recorded. Do not enter guesses.</li>
+</ul>
+<h2>Recording and reporting</h2>
+<ul>
+<li>Record raw measurements, not just the conclusions. The build script does the math.</li>
+<li>Report every specimen, including bad ones, and mark why a specimen was excluded.</li>
+<li>Never mix results from different protocol versions in one record.</li>
+</ul></section><hr style='border:0;border-top:1px solid var(--line);margin:36px 0'><section><h2 id="01-layer-adhesion" style="font-size:1.5rem">FP-A: Layer adhesion</h2>
+<p>A small bar printed standing upright is pulled apart along its length. Because the layers are stacked along the pull direction, it breaks between two layers, and the force it took tells you how well the layers bonded.</p>
+<h2>The specimen</h2>
+<ul>
+<li>16 × 6 × 71 mm, about 4 cm³.</li>
+<li>Gauge section (the thin middle): <strong>4.0 × 2.0 mm, 8 mm² nominal</strong>, 20 mm long.</li>
+<li>FP-A-T, the flexible variant: 3.0 × 2.0 mm, 6 mm² nominal.</li>
+<li>The top tab has a teardrop hole for the scale hook. The bottom tab goes in the vise.</li>
+</ul>
+<p>A typical PLA part breaks somewhere around 15 to 30 kg on the scale. That is an estimate from published Z-strength figures, not a measured result from this project.</p>
+<h2>Printing</h2>
+<ol>
+<li>Print <strong>5 specimens per setting</strong>, all on one plate, standing upright, in a row 30 mm apart, in the centre of the plate. Always print 5, never more or fewer, because the number of parts on the plate changes layer time and cooling, and that changes adhesion.</li>
+<li>Use the fixed settings from the overview: solid walls, 5 mm brim, seam on a narrow face.</li>
+<li>Label each specimen with a marker as soon as it comes off the plate: setting code and number, for example <code>T230-3</code>.</li>
+</ol>
+<h2>Conditioning</h2>
+<ul>
+<li>Let specimens rest at room temperature for <strong>at least 24 hours</strong> before testing.</li>
+<li>Nylon and other moisture sensitive materials: store in a sealed bag or dry box with desiccant during the rest, and test within 15 minutes of taking them out. Nylon gets tougher and weaker as it absorbs water, so "dry as printed" is the standard condition.</li>
+</ul>
+<h2>Measuring</h2>
+<ol>
+<li>Remove the brim cleanly.</li>
+<li>Measure the gauge section width and thickness with calipers at mid height. Record both to 0.01 mm. The real area, not the nominal one, is used for the calculation.</li>
+</ol>
+<h2>Pulling</h2>
+<ol>
+<li>Clamp the <strong>bottom tab</strong> in the vise with the jaws gripping the wide faces, up to the top edge of the tab and no higher. The taper and gauge must be clear of the jaws.</li>
+<li>Hook the scale through the hole. Turn on peak hold.</li>
+<li>Put on safety glasses.</li>
+<li>Pull <strong>straight up, in line with the bar</strong>, smoothly, building force over about 5 to 10 seconds until it breaks. Do not jerk. A sideways pull bends the bar and gives a falsely low number.</li>
+<li>Record the peak reading in kg.</li>
+<li>Record <strong>where it broke</strong>:</li>
+<li><code>gauge</code>: in the thin section. Valid.</li>
+<li><code>taper</code>: in the taper. Valid, but note it.</li>
+<li><code>tab</code> or <code>hole</code>: at the vise or the hook. <strong>Invalid.</strong> Exclude it and say why.</li>
+<li>Record how it broke: <code>clean</code> (flat, between layers) or <code>ragged</code> (tore across layers, which means adhesion is close to the material's own strength).</li>
+</ol>
+<h2>Flexibles (FP-A-T)</h2>
+<p>TPU often stretches a long way instead of snapping. Pull until it separates or until the scale reaches 40 kg, whichever comes first. Record the peak force and add <code>stretched</code> or <code>delaminated</code> to the break notes. If it never separates, record the peak and mark it <code>no-break</code>; it is reported as "greater than" that value.</p>
+<h2>Calculation</h2>
+<p>For each specimen:</p>
+<p><code>strength (MPa) = force (kg) × 9.80665 ÷ (width × thickness in mm²)</code></p>
+<p>Report the <strong>mean and standard deviation</strong> of the valid specimens. A setting needs at least 3 valid specimens to count. If fewer than 3 are valid, reprint.</p>
+<h2>What to write down</h2>
+<p>For each setting: the setting code, what changed from baseline, and for each specimen the width, thickness, peak kg, break location, and break type.</p></section><hr style='border:0;border-top:1px solid var(--line);margin:36px 0'><section><h2 id="02-dimension" style="font-size:1.5rem">FP-D: Dimensional accuracy</h2>
+<p>A plate with five round holes and five round pegs at nominal diameters of 3, 5, 8, 10 and 15 mm. Measuring them tells you how much to adjust holes and pegs in CAD so printed parts come out the size you drew.</p>
+<h2>Printing</h2>
+<ul>
+<li>Print flat, as exported, one per plate, in the centre.</li>
+<li>Fixed settings from the overview. All compensation settings off.</li>
+<li>Print it once with the baseline profile and once with the strength profile.</li>
+</ul>
+<h2>Measuring</h2>
+<p>Let the part cool to room temperature for at least 1 hour (24 hours for nylon, stored dry).</p>
+<p>For every hole and every peg:</p>
+<ol>
+<li>Measure the diameter <strong>along X and along Y</strong> (the plate's long edge is X).</li>
+<li>For pegs, measure at mid height, not at the base, to avoid first layer squish.</li>
+<li>For holes, use the inside jaws at mid depth. Close gently; do not force the jaws.</li>
+<li>Record both numbers to 0.01 mm.</li>
+</ol>
+<p>Also record the plate's overall length (100 mm nominal) and width (50 mm nominal).</p>
+<h2>Calculation</h2>
+<ul>
+<li><code>hole offset = mean(measured − nominal)</code> over all holes. Usually negative: holes print small.</li>
+<li><code>peg offset = mean(measured − nominal)</code> over all pegs. Usually positive.</li>
+<li><code>scale error = (measured length − 100) ÷ 100</code>, as a percentage. This is mostly shrinkage.</li>
+</ul>
+<h2>Using the result in CAD</h2>
+<p>To get a hole of true diameter D, draw <code>D − hole offset</code>. To get a peg of true diameter D, draw <code>D − peg offset</code>. The exported CAD parameter files contain these as <code>hole_comp</code> and <code>peg_comp</code>, already sign flipped, so you just add them.</p></section><hr style='border:0;border-top:1px solid var(--line);margin:36px 0'><section><h2 id="03-fit" style="font-size:1.5rem">FP-F: Fit</h2>
+<p>One peg of exactly 10.00 mm nominal diameter, and a plate with eleven holes from 10.00 to 10.50 mm in 0.05 mm steps. Each hole is engraved with its diametral clearance in hundredths of a millimetre (<code>00</code>, <code>05</code>, <code>10</code> … <code>50</code>). Trying the peg in each hole tells you what clearance to design for each kind of fit.</p>
+<h2>Printing</h2>
+<ul>
+<li>Print the plate flat and the peg upright (collar down), as exported, on the same plate.</li>
+<li>Fixed settings from the overview. All compensation settings off.</li>
+<li>Print once with the baseline profile and once with the strength profile.</li>
+<li>Let parts cool for at least 1 hour before testing (24 hours for nylon, stored dry).</li>
+</ul>
+<h2>Testing</h2>
+<p>Start at the largest hole (<code>50</code>) and work down. Insert the peg from the top face, straight, without twisting. Classify each hole using the first description that is true:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>loose</strong></td>
+<td>With the plate held horizontal, the peg drops through under its own weight</td>
+</tr>
+<tr>
+<td><strong>slip</strong></td>
+<td>The peg slides in with a light push from one finger, and can rattle</td>
+</tr>
+<tr>
+<td><strong>snug</strong></td>
+<td>Needs a firm push by hand, has no rattle, and stays in when the plate is turned upside down and shaken</td>
+</tr>
+<tr>
+<td><strong>press</strong></td>
+<td>Cannot be seated by hand, but seats fully when squeezed in the vise</td>
+</tr>
+<tr>
+<td><strong>none</strong></td>
+<td>Will not seat in the vise without damage</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test each hole once. Do not re-test a hole after a press fit, because pressing deforms it.</p>
+<h2>What to write down</h2>
+<p>The class of every hole. The build script reports the <strong>smallest clearance</strong> that gave each class:</p>
+<ul>
+<li><code>fit_loose</code>: smallest clearance that was loose</li>
+<li><code>fit_slip</code>: smallest clearance that was slip</li>
+<li><code>fit_snug</code>: smallest clearance that was snug</li>
+<li><code>fit_press</code>: largest clearance that was press</li>
+</ul>
+<p>These are diametral clearances on a 10 mm round feature printed in the XY plane. They include the hole and peg error from FP-D, so use them directly on nominal CAD dimensions and do not add <code>hole_comp</code> on top.</p>
+<h2>Limits</h2>
+<ul>
+<li>Fits change with diameter, orientation and wall count. Treat these as starting values for other sizes, and reprint the gauge if a fit is critical.</li>
+<li>For flexibles the classes still apply, but expect press fits across a wide range.</li>
+</ul></section><hr style='border:0;border-top:1px solid var(--line);margin:36px 0'></div></main>
+<footer><div class="wrap">Generated by <code>tools/build.py</code> from the files in <code>data/</code> and <code>protocols/</code>. Protocol v1.0.</div></footer>
+</body></html>

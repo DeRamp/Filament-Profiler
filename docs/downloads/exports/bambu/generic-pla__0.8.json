@@ -1,0 +1,31 @@
+{
+    "type": "filament",
+    "name": "FP Generic PLA 0.8 mm",
+    "from": "User",
+    "inherits": "",
+    "filament_settings_id": [
+        "FP Generic PLA 0.8 mm"
+    ],
+    "filament_notes": "Filament Profiler record generic-pla__0.8, protocol v1.0",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "hot_plate_temp": [
+        "55"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "55"
+    ],
+    "textured_plate_temp": [
+        "55"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "55"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
+    ]
+}

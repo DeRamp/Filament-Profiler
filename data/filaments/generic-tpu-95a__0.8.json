@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "generic-tpu-95a__0.8",
+  "protocol_version": "1.0",
+  "status": "untested",
+  "filament": {
+    "brand": "Generic",
+    "name": "TPU 95A",
+    "material": "TPU",
+    "flexible": true,
+    "drying": ""
+  },
+  "printer": {
+    "model": "Bambu Lab H3C",
+    "nozzle_diameter": 0.8,
+    "nozzle_type": "",
+    "build_plate": "",
+    "enclosure": "",
+    "room_temp_c": null
+  },
+  "bambu": {
+    "inherits": ""
+  },
+  "settings": {
+    "nozzle_temp": 230,
+    "nozzle_temp_initial_layer": 230,
+    "bed_temp": 35,
+    "flow_ratio": null,
+    "max_volumetric_speed": 3.2,
+    "pressure_advance": null,
+    "fan_min_speed": null,
+    "fan_max_speed": null,
+    "layer_height": 0.4
+  },
+  "tests": {
+    "adhesion": [],
+    "dimension": {},
+    "fit": {}
+  },
+  "notes": "Starting values are generic defaults, not measured. Replace with your spool's values and test.",
+  "tested_by": "",
+  "tested_on": ""
+}

@@ -1,0 +1,11 @@
+Record,Status,Brand,Filament,Material,Printer,Nozzle (mm),Protocol,Nozzle temp (C),Bed temp (C),Flow ratio,Max vol. speed (mm3/s),Pressure advance,Layer height (mm),Baseline Z strength (MPa),Baseline SD,Tuned Z strength (MPa),Tuned SD,Tuned setting,Gain (%),Hole offset (mm),Peg offset (mm),Scale error (%),Loose fit (mm),Slip fit (mm),Snug fit (mm),Press fit (mm),Tested by,Tested on,Notes
+generic-pa-gf__0.4,untested,Generic,PA-GF,PA-GF,Bambu Lab H3C,0.4,1.0,280,100,,8.0,,0.2,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pa-gf__0.6,untested,Generic,PA-GF,PA-GF,Bambu Lab H3C,0.6,1.0,280,100,,8.0,,0.3,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pa-gf__0.8,untested,Generic,PA-GF,PA-GF,Bambu Lab H3C,0.8,1.0,280,100,,8.0,,0.4,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pla__0.2,untested,Generic,PLA,PLA,Bambu Lab H3C,0.2,1.0,220,55,,12.0,,0.1,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pla__0.4,untested,Generic,PLA,PLA,Bambu Lab H3C,0.4,1.0,220,55,,12.0,,0.2,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pla__0.6,untested,Generic,PLA,PLA,Bambu Lab H3C,0.6,1.0,220,55,,12.0,,0.3,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-pla__0.8,untested,Generic,PLA,PLA,Bambu Lab H3C,0.8,1.0,220,55,,12.0,,0.4,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-tpu-95a__0.4,untested,Generic,TPU 95A,TPU,Bambu Lab H3C,0.4,1.0,230,35,,3.2,,0.2,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-tpu-95a__0.6,untested,Generic,TPU 95A,TPU,Bambu Lab H3C,0.6,1.0,230,35,,3.2,,0.3,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."
+generic-tpu-95a__0.8,untested,Generic,TPU 95A,TPU,Bambu Lab H3C,0.8,1.0,230,35,,3.2,,0.4,,,,,,,,,,,,,,,,"Starting values are generic defaults, not measured. Replace with your spool's values and test."

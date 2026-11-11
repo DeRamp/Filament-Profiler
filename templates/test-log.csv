@@ -1,0 +1,40 @@
+Filament Profiler test log (protocol v1.0)
+Filament:,,Nozzle (mm):,,Date:,,Tester:,
+Drying:,,Build plate:,,Room temp (C):,,Enclosure:,
+
+FP-A LAYER ADHESION
+Setting code,What changed,Specimen #,Width (mm),Thickness (mm),Peak (kg),Break (gauge/taper/tab/hole),Type (clean/ragged),Exclude? why
+,,1,,,,,,
+,,2,,,,,,
+,,3,,,,,,
+,,4,,,,,,
+,,5,,,,,,
+
+FP-D DIMENSION (profile used:        )
+Feature,Nominal,X (mm),Y (mm)
+Hole,3,,
+Hole,5,,
+Hole,8,,
+Hole,10,,
+Hole,15,,
+Peg,3,,
+Peg,5,,
+Peg,8,,
+Peg,10,,
+Peg,15,,
+Plate length,100,,
+Plate width,50,,
+
+FP-F FIT (profile used:        )
+Hole label,Clearance (mm),Class (loose/slip/snug/press/none)
+50,0.50,
+45,0.45,
+40,0.40,
+35,0.35,
+30,0.30,
+25,0.25,
+20,0.20,
+15,0.15,
+10,0.10,
+05,0.05,
+00,0.00,
