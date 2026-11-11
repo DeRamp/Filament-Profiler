@@ -25,7 +25,7 @@ The website (GitHub Pages, served from `docs/`) has the full test protocols, the
 | `tools/generate_models.py` | Parametric source for the test models |
 | `tools/new_filament.py` | Creates blank records for a new filament |
 | `tools/build.py` | Validates, computes, exports, and builds the site |
-| `presets/bambu/` | Hand-tuned Bambu Studio presets (filament + process), ready to import |
+| `presets/bambu/` | Hand-tuned Bambu Studio presets (filament + process, per nozzle size), ready to import |
 | `research/` | The research and reasoning behind each preset |
 | `exports/`, `docs/` | Generated. Do not edit by hand |
 

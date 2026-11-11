@@ -1,4 +1,4 @@
-# Max-strength settings: Overture Super PLA+ on a Bambu Lab H3C (0.4 mm nozzle)
+# Max-strength settings: Overture Super PLA+ on a Bambu Lab H3C (0.4 and 0.6 mm nozzles)
 
 The presets are in `presets/bambu/`:
 
@@ -46,6 +46,27 @@ These are the best values the research supports. **None of them have been measur
 | One wall on top surfaces | on | **off** | Puts full walls on top surfaces as well. |
 | Wall / infill speeds | 200 to 600 mm/s | **120 to 150 mm/s** | The 10 mm³/s cap limits speed anyway: 0.6 mm × 0.16 mm lines at 10 mm³/s run at about 104 mm/s. Lower speed targets keep the printer from constantly speeding up and slowing down. |
 | Seam | aligned | aligned | Unchanged. |
+
+## 0.6 mm nozzle version
+
+Files: `Overture_Super_PLA-plus_Max_Strength_0.6_nozzle.json` (filament preset, same values as the 0.4 version, limited to the H3C 0.6 nozzle) and `0.24mm_Max_Strength_Super_PLA-plus_0.6_nozzle.json` (process preset, inherits `0.24mm Balanced Quality @BBL H3C 0.6 nozzle`, which Bambu describes as its strength profile for the 0.6 nozzle).
+
+The same rules, scaled to the bigger nozzle:
+
+| Setting | Bambu default (0.24 BQ 0.6) | Max strength | Why |
+|---|---|---|---|
+| Layer height | 0.24 mm | **0.24 mm** | 40% of the nozzle, the same ratio as 0.16 on a 0.4. Stays well under the half-nozzle limit (0.30 mm) (2). |
+| Wall loops | 2 | **4** | 0.62 + 3 × 0.9 ≈ 3.3 mm of wall, close to the 0.4 preset's ≈ 3.45 mm. Strength follows wall thickness, not line count (12). |
+| Inner wall / infill / solid infill width | 0.62 mm | **0.90 mm** (150%) | Same 150% rule as the 0.4 preset (13). |
+| Outer wall / top surface width | 0.62 mm | 0.62 mm | Unchanged, to keep surfaces and outer dimensions clean. |
+| Top / bottom shells | 3 / 3 layers | **5 layers (1.2 mm) / 4 layers (0.96 mm)** | Matches the thickness of the 0.4 preset. |
+| Sparse infill | 15% grid | **40% gyroid** | Same as the 0.4 preset (15, 16). |
+| Infill/wall overlap, one wall on top | 15%, on | **25%, off** | Same as the 0.4 preset. |
+| Speeds | 200 to 350 mm/s | **80 to 100 mm/s** | The 10 mm³/s cap limits speed anyway: 0.9 × 0.24 mm lines run at about 46 mm/s. |
+
+Notes for the 0.6 nozzle:
+- Max volumetric speed stays at **10 mm³/s**. The melt rate depends on the hotend, not the nozzle size, and strength dropped above about 12 mm³/s (4). A 0.6 nozzle isn't stronger per gram, but it puts down a thick wall in less time (12). Because of the cap, this preset will not be faster than the 0.4 one. Raise the cap to 12 to 14 mm³/s if print time matters more than the last few percent of strength.
+- Fine details and small text will be coarser than with the 0.4 nozzle.
 
 ## What these presets don't change, and why
 

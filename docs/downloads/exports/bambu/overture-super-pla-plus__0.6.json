@@ -1,0 +1,40 @@
+{
+    "type": "filament",
+    "name": "FP Overture Super PLA+ 0.6 mm",
+    "from": "User",
+    "inherits": "Generic PLA @BBL H3C",
+    "filament_settings_id": [
+        "FP Overture Super PLA+ 0.6 mm"
+    ],
+    "filament_notes": "Filament Profiler record overture-super-pla-plus__0.6, protocol v1.0",
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "filament_flow_ratio": [
+        "1.01"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "fan_max_speed": [
+        "60"
+    ]
+}
