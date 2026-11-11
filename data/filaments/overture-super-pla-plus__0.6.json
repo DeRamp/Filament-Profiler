@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "overture-super-pla-plus__0.6",
+  "protocol_version": "1.0",
+  "status": "untested",
+  "filament": {
+    "brand": "Overture",
+    "name": "Super PLA+",
+    "material": "PLA",
+    "flexible": false,
+    "drying": ""
+  },
+  "printer": {
+    "model": "Bambu Lab H3C",
+    "nozzle_diameter": 0.6,
+    "nozzle_type": "",
+    "build_plate": "",
+    "enclosure": "",
+    "room_temp_c": null
+  },
+  "bambu": {
+    "inherits": "Generic PLA @BBL H3C"
+  },
+  "settings": {
+    "nozzle_temp": 225,
+    "nozzle_temp_initial_layer": 225,
+    "bed_temp": 60,
+    "flow_ratio": 1.01,
+    "max_volumetric_speed": 10.0,
+    "pressure_advance": null,
+    "fan_min_speed": 30,
+    "fan_max_speed": 60,
+    "layer_height": 0.24
+  },
+  "tests": {
+    "adhesion": [],
+    "dimension": {},
+    "fit": {}
+  },
+  "notes": "Research-based max-strength starting point, not yet measured. Full presets: presets/bambu/. Reasoning and sources: research/strength-super-pla-plus.md.",
+  "tested_by": "",
+  "tested_on": ""
+}

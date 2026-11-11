@@ -1,0 +1,80 @@
+{
+    "type": "filament",
+    "name": "Overture TPU 95A Max Strength @BBL H3C",
+    "inherits": "Generic TPU @BBL H3C",
+    "from": "User",
+    "is_custom_defined": "0",
+    "version": "02.09.00.74",
+    "filament_settings_id": [
+        "Overture TPU 95A Max Strength @BBL H3C"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "filament_type": [
+        "TPU"
+    ],
+    "filament_density": [
+        "1.18"
+    ],
+    "nozzle_temperature": [
+        "225",
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225",
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "210"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "hot_plate_temp": [
+        "40"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "40"
+    ],
+    "textured_plate_temp": [
+        "40"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "40"
+    ],
+    "eng_plate_temp": [
+        "40"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "40"
+    ],
+    "filament_max_volumetric_speed": [
+        "3.2",
+        "3.2"
+    ],
+    "fan_min_speed": [
+        "50"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_cooling_layer_time": [
+        "30"
+    ],
+    "overhang_fan_speed": [
+        "100"
+    ],
+    "overhang_fan_threshold": [
+        "25%"
+    ],
+    "additional_cooling_fan_speed": [
+        "0"
+    ],
+    "filament_notes": [
+        "Max-strength preset for Overture TPU 95A on Bambu Lab H3C 0.4 mm nozzle. Dry 70 C for 7 h. Feed from an external spool, not the AMS. See research/strength-tpu-95a.md in DeRamp/Filament-Profiler."
+    ],
+    "compatible_printers": [
+        "Bambu Lab H3C 0.4 nozzle"
+    ]
+}
