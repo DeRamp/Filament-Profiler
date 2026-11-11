@@ -19,25 +19,25 @@
     "room_temp_c": null
   },
   "bambu": {
-    "inherits": ""
+    "inherits": "Generic PLA @BBL H3C"
   },
   "settings": {
-    "nozzle_temp": 210,
-    "nozzle_temp_initial_layer": 210,
-    "bed_temp": 55,
-    "flow_ratio": null,
-    "max_volumetric_speed": 12.0,
+    "nozzle_temp": 225,
+    "nozzle_temp_initial_layer": 225,
+    "bed_temp": 60,
+    "flow_ratio": 1.01,
+    "max_volumetric_speed": 10.0,
     "pressure_advance": null,
-    "fan_min_speed": null,
-    "fan_max_speed": null,
-    "layer_height": 0.2
+    "fan_min_speed": 30,
+    "fan_max_speed": 60,
+    "layer_height": 0.16
   },
   "tests": {
     "adhesion": [],
     "dimension": {},
     "fit": {}
   },
-  "notes": "Baseline from the Overture TDS range (190-220 C nozzle, 40-60 C bed). Test plan: test-plans/overture-super-pla-plus__0.4.json",
+  "notes": "Research-based max-strength starting point, not yet measured. Full presets: presets/bambu/. Reasoning and sources: research/strength-super-pla-plus.md.",
   "tested_by": "",
   "tested_on": ""
 }

@@ -3,4 +3,3 @@ trimesh
 numpy
 markdown
 openpyxl
-fonttools
